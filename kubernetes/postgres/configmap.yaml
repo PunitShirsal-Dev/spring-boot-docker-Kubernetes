@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  labels:
+    app: postgres
+    component: database
+data:
+  POSTGRES_DB: "springbootdb"
+  POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --locale=C"
+  POSTGRES_INITDB_WALDIR: "/var/lib/postgresql/data/pg_wal"
